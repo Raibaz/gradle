@@ -27,7 +27,6 @@ import org.gradle.test.fixtures.file.TestFile
 import org.junit.experimental.categories.Category
 import spock.lang.Unroll
 
-@Category(PerformanceRegressionTest)
 class BuildScanPluginPerformanceTest extends AbstractBuildScanPluginPerformanceTest {
 
     private static final int MEDIAN_PERCENTAGES_SHIFT = 10
