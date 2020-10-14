@@ -66,7 +66,7 @@ fun accessibleExtensionAccessorFor(targetType: String, name: AccessorNameSpec, t
         /**
          * Configures the [$original][$type] extension.
          */
-        fun $targetType.`$kotlinIdentifier`(configure: $type.() -> Unit): Unit =
+        fun $targetType.`$kotlinIdentifier`(configure: Action<$type>): Unit =
             $thisExtensions.configure("$stringLiteral", configure)
     """
 }
