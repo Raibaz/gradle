@@ -33,12 +33,12 @@ import kotlin.reflect.KProperty
  * @param configuration The expression to configure this container with
  * @return The container.
  */
-operator fun <T : Any, C : NamedDomainObjectContainer<T>> C.invoke(
+@Suppress("nothing_to_inline")
+inline operator fun <T : Any, C : NamedDomainObjectContainer<T>> C.invoke(
     configuration: Action<NamedDomainObjectContainerScope<T>>
-): C =
-    apply {
-        configuration.execute(NamedDomainObjectContainerScope.of(this))
-    }
+): C = apply {
+    configuration.execute(NamedDomainObjectContainerScope.of(this))
+}
 
 
 /**
