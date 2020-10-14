@@ -17,14 +17,12 @@
 package org.gradle.performance
 
 import org.apache.commons.io.FileUtils
-import org.gradle.performance.categories.PerformanceRegressionTest
 import org.gradle.profiler.BuildContext
 import org.gradle.profiler.BuildMutator
 import org.gradle.profiler.InvocationSettings
 import org.gradle.profiler.Phase
 import org.gradle.profiler.ScenarioContext
 import org.gradle.test.fixtures.file.TestFile
-import org.junit.experimental.categories.Category
 import spock.lang.Unroll
 
 class BuildScanPluginPerformanceTest extends AbstractBuildScanPluginPerformanceTest {
